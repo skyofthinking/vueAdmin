@@ -1,3 +1,4 @@
-import mock from './mock';
+import MockUser from './mock';
+import MockInvest from './invest';
 
-export default mock;
+export { MockUser, MockInvest };

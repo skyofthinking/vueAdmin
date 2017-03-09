@@ -1,5 +1,6 @@
 import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
+import initMockAdapter from '../common/initMockAdapter';
 import { LoginUsers, Users } from '../mockdata/user';
 let _Users = Users;
 
@@ -8,7 +9,7 @@ export default {
    * mock bootstrap
    */
   bootstrap() {
-    let mock = new MockAdapter(axios);
+    let mock = initMockAdapter.getMockAdapter();
 
     // mock success request
     mock.onGet('/success').reply(200, {

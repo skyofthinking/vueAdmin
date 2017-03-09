@@ -9,6 +9,13 @@ import Page4 from './pages/nav2/Page4.vue'
 import Page5 from './pages/nav2/Page5.vue'
 import Page6 from './pages/nav3/Page6.vue'
 import echarts from './pages/charts/echarts.vue'
+import invest from './pages/invest/Invest.vue'
+
+import vueeditor from './pages/manage/VueEditor'
+import markdown from './pages/manage/Markdown'
+import upload from './pages/manage/Upload'
+import basecharts from './pages/manage/BaseCharts'
+import mixcharts from './pages/manage/MixCharts'
 
 let routes = [
     {
@@ -63,6 +70,28 @@ let routes = [
         iconCls: 'fa fa-bar-chart',
         children: [
             { path: '/echarts', component: echarts, name: 'echarts' }
+        ]
+    },
+    {
+        path: '/',
+        component: Home,
+        name: 'Invest',
+        iconCls: 'fa fa-money',
+        children: [
+            { path: '/invest', component: invest, name: 'Invest' }
+        ]
+    },
+    {
+        path: '/',
+        component: Home,
+        name: 'Manage',
+        iconCls: 'fa fa-money',
+        children: [
+            { path: '/vueeditor', component: vueeditor, name: 'VueEditor' },
+            { path: '/markdown', component: markdown, name: 'Markdown' },
+            { path: '/upload', component: upload, name: 'Upload' },
+            { path: '/basecharts', component: basecharts, name: 'BaseCharts' },
+            { path: '/mixcharts', component: mixcharts, name: 'MixCharts' }
         ]
     },
     {
